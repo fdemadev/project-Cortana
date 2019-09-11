@@ -468,7 +468,11 @@ small {
   border-color: #006699; }
 
 .btn--ghost {
-  color: white; }
+  color: white;
+  border-color: white; }
+  .btn--ghost:hover {
+    color: #99cc00;
+    background: white; }
 
 .logo {
   width: 150px;
@@ -507,7 +511,7 @@ small {
   background: #006699;
   color: white;
   font-weight: 700;
-  padding: 0 0.70313rem; }
+  padding: 0 1.40625rem; }
   @media only screen and (min-width: 992px) {
     .masterbar {
       -webkit-box-orient: horizontal;
@@ -517,7 +521,7 @@ small {
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between;
-      padding: 0 0.70313rem;
+      padding: 0.70313rem 1.40625rem;
       height: 4.21875rem; } }
 
 .menu {
@@ -529,10 +533,13 @@ small {
   -ms-flex-flow: column;
   flex-flow: column;
   text-align: center;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  padding-bottom: 0.70313rem; }
   .menu a {
     padding: 0.70313rem 0;
     width: 210px; }
+    .menu a:hover {
+      color: #99cc00; }
     .menu a:active {
       color: #0099cc; }
   @media only screen and (min-width: 576px) {
@@ -545,13 +552,15 @@ small {
         padding: 0.70313rem;
         width: auto; } }
   @media only screen and (min-width: 992px) {
-    .menu a {
-      font-size: 0.875rem;
-      height: 40px; }
-      .menu a:last-of-type {
-        padding-right: 0; }
-      .menu a:hover {
-        color: #0099cc; } }
+    .menu {
+      padding-bottom: 0; }
+      .menu a {
+        font-size: 0.875rem;
+        height: 40px; }
+        .menu a:last-of-type {
+          padding-right: 0; }
+        .menu a:hover {
+          color: #0099cc; } }
 
 .topbar {
   -webkit-box-ordinal-group: 0;
@@ -559,7 +568,7 @@ small {
   order: -1;
   display: none;
   background: #0099cc;
-  padding: 0 0.70313rem;
+  padding: 0 1.40625rem;
   color: white;
   font-weight: 500;
   font-size: 0.875rem; }
@@ -573,7 +582,7 @@ small {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      height: 2.10938rem; } }
+      height: 2.8125rem; } }
 
 .hero {
   display: -ms-grid;
@@ -754,6 +763,8 @@ small {
   color: #006699;
   font-weight: 700;
   text-transform: uppercase; }
+  .services__link:hover {
+    color: #99cc00; }
 
 .zones {
   background: #006699;
@@ -800,7 +811,19 @@ small {
       font-size: 2.8125rem; } }
 
 .contact__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding-bottom: 1.40625rem; }
+  @media only screen and (min-width: 768px) {
+    .contact__container {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+      -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+      grid-gap: 1.40625rem; } }
 
 .contact__item {
   display: -webkit-box;

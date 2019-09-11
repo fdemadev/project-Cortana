@@ -98,4 +98,8 @@
     color: $blue-dark;
     font-weight: 700;
     text-transform: uppercase;
+
+    &:hover{
+        color: $green;
+    }
 }

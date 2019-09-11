@@ -17,4 +17,10 @@
 
 .btn--ghost {
 	color: $white;
+	border-color:$white;
+
+	&:hover{
+		color: $green;
+		background: $white;
+	}
 }

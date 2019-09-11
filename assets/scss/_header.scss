@@ -15,14 +15,13 @@
     color: $white;
     font-weight: 700;
 
-    padding: 0 rem($mn/2);
-
+    padding: 0 rem($mn);
 
     @include screen('desktop'){
         flex-flow: row;
         justify-content: space-between;
 
-        padding: 0 rem($mn / 2);
+        padding: rem($mn/2) rem($mn);
 
         height: rem($mn * 3);
     }
@@ -34,10 +33,16 @@
     
     text-transform: uppercase;
 
+    padding-bottom: rem($mn / 2);
+
     a {
         padding: rem($mn / 2 ) 0;
 
         width: 210px;
+
+        &:hover{
+            color: $green;
+        }
 
         &:active{
             color: $blue-light;
@@ -53,6 +58,7 @@
         }
     }
     @include screen('desktop'){
+        padding-bottom: 0;
         a {
             font-size: rem($fs - 1);
             height: 40px;
@@ -73,7 +79,7 @@
 
     background: $blue-light;
 
-    padding: 0 rem($mn/2);
+    padding: 0 rem($mn);
 
     color: $white;
     font-weight: 500;
@@ -90,6 +96,6 @@
         display: flex;
         align-items: center;
         
-        height: rem($mn * 1.5);
+        height: rem($mn * 2);
     }
 }
