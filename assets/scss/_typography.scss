@@ -1,0 +1,86 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-system;
+    font-weight: 700;
+    line-height: 1.1;
+}
+  
+h1 {
+    font-size: rem(32);
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+  
+h3 { 
+    font-weight: 400;
+}
+  
+h4 {
+    font-weight: 400;
+    font-style: italic;
+}
+  
+/* Bloques -----------------------------------------------*/
+  
+p {
+    margin: 0 0 rem($mn);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+blockquote {
+    margin: 0 0 rem($mn);
+    padding: 0 rem($mn);
+    font-style: italic;
+    font-weight: 700;
+}
+  
+/* LISTAS ---------------------------------------------------*/
+  
+ul, ol {
+    margin-left: 1em;
+    margin-bottom: rem($mn);
+  
+    ul,
+    ol {
+        margin-bottom: 0;
+    }
+  
+    &:last-child {
+      margin-bottom: 0;
+    }
+}
+  
+dl {
+    margin-top: 0;
+}
+dt,
+dd {
+    line-height: $lh;
+}
+    
+hr {
+    height: 0;
+    margin: rem($mn) 0;
+    border-top: 1px solid $grey;
+}
+
+/*  ELEMENTOS EN LÍNEA --------------------------------*/
+em {
+    font-style: italic;
+}
+  
+strong {
+    font-weight: 700;
+}
+ 
+small { 
+    font-size: rem(12);
+}

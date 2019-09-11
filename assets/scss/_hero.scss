@@ -1,0 +1,78 @@
+.hero {
+	display: grid;
+	grid-template-columns: minmax(rem(16),1fr) minmax(auto, rem($hero_width)) minmax(rem(16),1fr);
+	grid-template-rows: rem($hero_height);
+	
+	@include screen('tablet'){
+		grid-template-rows: rem($hero_height * 1.6);
+	}
+}
+
+.hero__image {
+	grid-column: 1 / 4;
+	grid-row: 1 / 2;
+
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.hero__item {
+	grid-column: 2 / 3;
+	grid-row: 1 / 2;
+	z-index: 100;
+
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+	align-items: center;
+
+	padding: rem($mn) 0;
+
+	@include screen('mobile'){
+		justify-content: center;
+
+		padding: rem($mn * 2 ) rem($mn);
+	}
+}
+
+.hero__title {
+	color: $white;
+	text-transform: uppercase;
+	text-align: center;
+
+	font-size: rem($fs + 3 );
+
+	padding-bottom: rem($mn);
+
+	@include screen('mobile'){
+		font-size: rem($fs * 1.5);
+
+		padding-bottom: rem($mn * 2);
+	}
+
+	@include screen('tablet'){
+		font-size: rem($fs * 2);
+	}
+}
+
+.hero__title--blue{
+	color: $blue-dark;
+}
+
+.hero__excerpt {
+	color: $white;
+	text-align: center;
+
+	@include screen('mobile'){
+		margin-bottom: rem($mn * 2);
+	}
+}
+
+.hero__excerpt--blue {
+	color: $blue-dark;
+}
+
+.hero__excerpt span {
+	display: block;
+}

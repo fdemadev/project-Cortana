@@ -1,0 +1,101 @@
+.services{
+    background: $white-dark;
+
+    padding: 0 rem($mn);
+
+
+}
+.services__title{
+    display: flex;
+    justify-content: center;
+
+    font-size: rem($fs * 2);
+    color: $blue-dark;
+    text-transform: capitalize;
+
+    padding: rem($mn) 0;
+
+    @include screen('tablet'){
+        font-size: rem($fs * 3);
+    }
+}
+
+.services__list{
+    display: flex;
+    flex-flow: column;
+
+    @include screen('mobile'){
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-gap: rem($mn);
+    }
+
+    @include screen('desktop-large'){
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: auto;
+    }
+}
+
+.service{
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    margin-bottom: rem($mn);
+
+    box-shadow: 0 4px 8px 4px $grey;
+
+    @include screen('mobile'){
+        margin-bottom: 0;
+    }
+}
+.service__link{
+    height: 100%;
+}
+.service__title{
+    padding: rem($mn / 2) rem($mn / 2);
+
+    color: $blue-light;
+    font-size: rem($fs + 1);
+    font-weight: 700;
+
+    @include screen('tablet'){
+        padding: rem($mn / 2) rem($mn);
+        font-size:($fs * 1.5);
+    }
+}
+
+.service__container{
+    padding: 0 rem($mn / 2);
+    padding-bottom: rem($mn / 2);
+
+    p{
+        text-align: justify;
+        font-size: rem($fs - 1);    
+    }
+
+    @include screen('tablet'){
+        padding: 0 rem($mn);
+        padding-bottom: rem($mn / 2);
+
+        p{
+            font-size: rem($fs);
+        }
+        
+    }
+
+
+}
+
+.services__link{
+    display: flex;
+    justify-content: flex-end;
+
+    padding: rem($mn) 0;
+
+    color: $blue-dark;
+    font-weight: 700;
+    text-transform: uppercase;
+}

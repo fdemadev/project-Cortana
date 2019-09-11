@@ -1,0 +1,28 @@
+.ios-canvas {
+	width: 100%;
+	overflow-x: hidden;
+}
+
+.page-canvas {
+	position: relative;
+	z-index: 1;
+
+	min-height: 100vh;
+
+	transform: translateX(0);
+
+	padding-top: 160px;
+	background: $white;
+	
+	transition: transform .3s ease-in-out;
+}
+
+.wrapper {
+    margin-right: auto; /* 1 */
+    margin-left:  auto; /* 1 */
+  
+    max-width: 960px; /* 2 */
+  
+    padding-right: 16px; /* 3 */
+    padding-left:  16px; /* 3 */
+}

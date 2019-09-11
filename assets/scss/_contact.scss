@@ -1,0 +1,54 @@
+.contact{
+    background: $white-dark;
+
+    padding: 0 rem($mn);
+
+
+}
+.contact__title{
+    display: flex;
+    justify-content: center;
+
+    font-size: rem($fs * 2);
+    color: $blue-dark;
+    text-transform: capitalize;
+
+    padding: rem($mn) 0;
+
+    @include screen('tablet'){
+        font-size: rem($fs * 3);
+    }
+}
+.contact__container{
+    padding-bottom: rem($mn);
+
+}
+.contact__item{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    padding-bottom: rem($mn / 2);
+
+    :last-of-type{
+        padding-bottom: 0;
+    }
+}
+.contact__image{
+    width: rem(50);
+
+    @include screen('desktop-large'){
+        width: rem(100);
+    }
+
+}
+.contact__link{
+    padding-top: rem($mn / 2);
+    
+    color: $black;
+    font-weight: 700;
+
+    @include screen('tablet'){
+        font-size: rem($fs * 1.5);
+    }
+}

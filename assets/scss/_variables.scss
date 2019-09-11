@@ -1,0 +1,39 @@
+/* COLORS  ----------------------------*/
+
+$blue-dark: rgba(0, 102, 153, 1);
+$blue-light: rgba(0, 153, 204, 1);
+$green: rgba(153, 204, 0, 1); 
+
+
+$grey: rgba(155,155,155,1);
+$black: rgba(0,0,0,1);
+$white: rgba(255,255,255,1);
+$white-dark: rgba(237, 237, 237, 1);
+
+
+
+/* FONTS  ----------------------------*/
+
+$font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-sans-serif: "Source Sans Pro", "Helvetica", sans-serif;
+$font-serif: Georgia, Times, 'Times New Roman', serif;
+
+/* LAYOUT  ----------------------------*/
+$fs: 15;
+$lh: 1.5; // line-height
+$mn: $fs * $lh; //magic number (22.5px)
+
+/* LOGO  ----------------------------*/
+$logo-width: 150px;
+$logo-height: 40px;
+$logo-position: center left;
+$logo-size: contain;
+
+/* HEADER  ----------------------------*/
+
+$header_height: rem($mn * 4.5);
+
+/* HERO  ----------------------------*/
+
+$hero_width: 1175;
+$hero_height: 420;

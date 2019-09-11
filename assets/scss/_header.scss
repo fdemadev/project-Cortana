@@ -1,0 +1,95 @@
+.header{
+    display: flex;
+    flex-flow: column;
+
+    width: 100%;
+
+}
+.masterbar{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    
+    background: $blue-dark;
+
+    color: $white;
+    font-weight: 700;
+
+    padding: 0 rem($mn/2);
+
+
+    @include screen('desktop'){
+        flex-flow: row;
+        justify-content: space-between;
+
+        padding: 0 rem($mn / 2);
+
+        height: rem($mn * 3);
+    }
+}
+.menu{
+    display: flex;
+    flex-flow:column;
+    text-align: center;
+    
+    text-transform: uppercase;
+
+    a {
+        padding: rem($mn / 2 ) 0;
+
+        width: 210px;
+
+        &:active{
+            color: $blue-light;
+        }
+    }
+
+    @include screen('mobile'){
+        flex-flow: row;
+
+        a {
+            padding: rem($mn / 2 );
+            width: auto;
+        }
+    }
+    @include screen('desktop'){
+        a {
+            font-size: rem($fs - 1);
+            height: 40px;
+           &:last-of-type{
+               padding-right: 0;
+           }
+           &:hover{
+               color: $blue-light;
+           }
+
+        }
+    }
+}
+.topbar{
+    order: -1;
+
+    display: none;
+
+    background: $blue-light;
+
+    padding: 0 rem($mn/2);
+
+    color: $white;
+    font-weight: 500;
+    font-size: rem($fs - 1);
+
+    // display: none;
+
+    a{
+
+        margin-right: rem($mn/2);
+    }
+    @include screen('tablet'){
+
+        display: flex;
+        align-items: center;
+        
+        height: rem($mn * 1.5);
+    }
+}

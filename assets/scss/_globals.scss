@@ -1,0 +1,24 @@
+* { 
+    box-sizing: border-box; 
+}
+
+html, body {
+	min-height: 100vh;
+    text-size-adjust: none;
+    font-family: $font-system;
+    line-height: $lh;
+    font-size: $fs;
+
+    @extend %antialiased;
+}
+
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+img {
+	width: 100%;
+	display: block;
+	height: auto;
+}

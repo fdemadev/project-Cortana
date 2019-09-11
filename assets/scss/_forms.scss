@@ -1,0 +1,287 @@
+/* FORMALIZE  ***********************/
+
+textarea,
+select,
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+[type="file"] {
+	display: block;
+	margin: 0;
+	width: 100%;
+	height: rem($mn * 2);
+    
+    outline: 0;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+
+	padding: rem($mn/2) rem($mn/4);
+
+    background-clip: padding-box;
+    background-color: transparent;
+
+    border-radius: 0;
+	border: 1px solid $grey;
+  
+	font-family: $font-system;
+ 	color: inherit;
+    text-align: left;
+    font-size: rem($fs);
+    vertical-align: top;
+}
+
+
+textarea {
+	height: auto;
+	min-height: rem($mn * 4);
+	overflow: auto;
+    resize: vertical;
+}
+
+input[type="search"]::-webkit-search-decoration {display: none;}
+
+select[size],
+select[multiple] {
+    height: auto;
+}
+
+select[size="0"],
+select[size="1"] {
+  height: rem($mn*2);
+}
+
+optgroup {
+    font-family: $font-system;
+    font-style: normal;
+    font-weight: normal;
+}
+
+optgroup::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    position: relative;
+    top: -2px;	
+}
+
+input[type="file"] {
+    border: none;
+    padding-left: 0;
+}
+
+
+/* Reglas específicas para webkit */
+@media (-webkit-min-device-pixel-ratio: 0) {
+  
+    /* Elimina la flecha del select y ajusta el padding */
+        select[size],
+        select[multiple],
+        select[multiple][size] {
+            background-image: none;
+	        padding-right: rem($mn/4);
+        }
+
+    select,
+    select[size="0"],
+    select[size="1"] {
+        background-image: url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==);
+        background-repeat: no-repeat;
+        background-position: right center;
+        padding-right: rem($mn);
+    }
+}
+
+select[size],
+select[multiple],
+select[multiple][size] {
+    background-image: none;
+    padding-right: rem($mn/4);
+}
+
+select,
+select[size="0"],
+select[size="1"] {
+    background-image: url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: rem($mn);
+}
+
+/* Triángulo de 13 x 4 de color blanco */
+select.negative {
+    background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAICAYAAADnVO9eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAG5JREFUeNpi+P//f8N/2oMGBhAAMhSAeD8NLACZqcCADoCCAUD8ngoWgMwIYMAHgAoEgLifAktAegUYiAVAxQZAfJ4EC0BqDRjIBUDNBQSCEyRXwEANAA3O9VgsWU9SMJFgoQMQ34diB1L0AgQYAGfK3zBZp7pwAAAAAElFTkSuQmCC');
+    background-size: 11px 4px;
+    background-position: calc(100% - 6px) center;
+    background-repeat: no-repeat;
+}
+
+/*** EFECTOS SEGÚN ATRIBUTO O ESTADO  ****************************************/
+
+textarea[disabled],
+select[disabled],
+input[type="date"][disabled],
+input[type="datetime"][disabled],
+input[type="datetime-local"][disabled],
+input[type="email"][disabled],
+input[type="month"][disabled],
+input[type="number"][disabled],
+input[type="password"][disabled],
+input[type="search"][disabled],
+input[type="tel"][disabled],
+input[type="text"][disabled],
+input[type="time"][disabled],
+input[type="url"][disabled],
+input[type="week"][disabled] {
+    background-color: #ddd;
+}
+
+input[disabled],
+select[disabled],
+select[disabled] option,
+select[disabled] optgroup,
+textarea[disabled] {
+    box-shadow: none;
+    user-select: none;
+    color: #ddd;
+    cursor: default;
+}
+
+input:invalid,
+select:invalid,
+textarea:invalid {
+    box-shadow: none;
+}
+
+/* Sustitución del outline */
+input:focus,
+button:focus,
+select:focus,
+textarea:focus {
+    z-index: 1;
+}
+
+/* Se debería dar outline para hacerlo accesible */
+input[type="file"]:focus,
+input[type="file"]:active,
+input[type="radio"]:focus,
+input[type="radio"]:active,
+input[type="checkbox"]:focus,
+input[type="checkbox"]:active {
+    box-shadow: none;
+}
+
+label:hover,
+button,
+input[type="submit"],
+input[type="reset"] {
+    cursor: pointer;
+}
+
+/** PLACEHOLDERS ****************************************/
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    font-size: rem($fs*.875);
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    font-size: rem($fs*.875);
+}
+
+/** BUTTONS ****************************************/
+
+button,
+[type="reset"],
+[type="submit"],
+[type="button"] {
+    display: inline-flex;
+	flex-flow: wrap;
+	align-content: center;
+	align-items: center;
+
+	width: auto;
+	min-height: rem($mn);
+	margin: 0;
+
+	border-radius: 0;
+	border: 1px solid;
+	padding: 0 rem( ($mn - 2) /2); // Restamos 2px del borde
+    background: transparent;
+
+	font-family: $font-sans-serif;
+	font-size: rem($fs * .75);
+	line-height: rem($mn);
+	font-weight: 700;
+	color: inherit;
+  
+	text-shadow: none;
+	text-decoration: none;
+
+	cursor: pointer;
+	outline: 0;
+	overflow: visible;
+}
+
+button:hover,
+[type="reset"]:hover,
+[type="submit"]:hover,
+[type="button"]:hover {
+	background-image: none;
+	background: initial;
+	text-decoration: none;
+}
+
+button:active,
+input[type="reset"]:active,
+input[type="submit"]:active,
+input[type="button"]:active {
+    background-image: none;
+    background: #ddd;
+    box-shadow: none;
+}
+
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+button[disabled] {
+    box-shadow: none;
+    user-select: none;
+    cursor: default;
+}
+
+/** FIELDSET ****************************************/
+
+fieldset {
+	margin: 0;
+	padding: rem($mn - 1); // Compensación del borde inferior
+	border: 1px solid;
+}
+
+legend {
+	font-weight: 700;
+	line-height: rem($mn);
+	font-size: rem($fs*.875);
+	background: white;
+	padding-left: rem($mn/2);
+	position: relative;
+	left: -.6rem;
+}

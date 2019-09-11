@@ -1,0 +1,39 @@
+.footer{
+    background: $blue-dark;
+
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+
+    padding: rem($mn);
+}
+
+.footer-up{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    color: $white;
+
+    a{
+        padding-bottom: rem($mn);
+    }
+
+    @include screen('mobile'){
+        flex-flow: row;
+        justify-content: space-between;
+
+        padding-bottom: rem($mn);
+
+        a{
+            padding-bottom: 0;
+        }
+    }
+}
+
+.footer-down{
+    display: flex;
+    justify-content: center;
+    color: $white;
+}
+
+

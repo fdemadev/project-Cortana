@@ -1,0 +1,27 @@
+.zones{
+    background: $blue-dark;
+
+    padding: 0 rem($mn);
+
+
+}
+.zones__title{
+    display: flex;
+    justify-content: center;
+
+    font-size: rem($fs * 2);
+    color: $white;
+    text-transform: capitalize;
+
+    padding: rem($mn) 0;
+
+    @include screen('tablet'){
+        font-size: rem($fs * 3);
+    }
+}
+.zone{
+    padding-bottom: rem($mn);
+}
+.zone__image{
+    max-height: 80vh;
+}

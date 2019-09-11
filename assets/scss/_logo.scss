@@ -1,0 +1,17 @@
+.logo {
+    
+    width: $logo-width;
+    height: $logo-height;
+    background-image: url('../images/logo--horizontal--blanco.svg');
+    background-repeat: no-repeat;
+    background-position: $logo-position;
+    background-size: $logo-size;
+    text-indent: -9000px;
+    margin: rem($mn/2) 0;
+
+    a {
+        display: block;
+        height: inherit;
+    }
+
+}
